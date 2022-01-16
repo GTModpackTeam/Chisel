@@ -22,7 +22,6 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.registries.IForgeRegistry;
-import team.chisel.Reflection;
 import team.chisel.api.carving.CarvingUtils;
 import team.chisel.client.render.ChiselModelRegistry;
 import team.chisel.common.init.BlockRegistry;
@@ -122,7 +121,7 @@ public class ChiselBlockBuilder<T extends Block & ICarvable> {
             ret[i].setUnlocalizedName(domain + '.' + blockName);
             ret[i].setHardness(1);
             if (sound != null) {
-                Reflection.getReflection().setSoundType(ret[i], sound);
+                ret[i].setSoundType(sound);
             }
             
             registry.register(ret[i]);

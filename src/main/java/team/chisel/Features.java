@@ -93,7 +93,7 @@ public enum Features {
                     .next("bolted")
                     .next("scaffold")
                     .addOreDict("blockAluminum")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.METAL).setHarvestLevel("pickaxe", 1));
+                    .build(b -> b.setSoundType(SoundType.METAL).setHarvestLevel("pickaxe", 1));
             
             CarvingUtils.addOreGroup("blockAluminum");
         }
@@ -195,7 +195,7 @@ public enum Features {
                     .next("cuts")
                     .addOreDict("stoneAndesite")
                     .addOreDict("stoneAndesitePolished")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(1.5F).setResistance(30.0F));
+                    .build(b -> b.setHardness(1.5F).setResistance(30.0F).setSoundType(SoundType.STONE));
         }
     },
 
@@ -273,7 +273,7 @@ public enum Features {
                     .next("twisted")
                     .next("prism")
                     .next("raw")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(2.0F).setResistance(10.0F));
+                    .build(b -> b.setHardness(2.0F).setResistance(10.0F).setSoundType(SoundType.STONE));
         }
         
         @Override
@@ -349,7 +349,7 @@ public enum Features {
                     .next("raw").setOrder(-100)
                     .addOreDict("stoneBasalt")
                     .addOreDict("stoneBasaltPolished")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(1.5F).setResistance(10.0F));
+                    .build(b -> b.setHardness(1.5F).setResistance(10.0F).setSoundType(SoundType.STONE));
 
         }
 
@@ -414,7 +414,7 @@ public enum Features {
                         .next("papers")
                         .addOreDict("bookshelf")
                         .addOreDict("bookshelf" + woodType)
-                        .build(b -> Reflection.getReflection().setSoundType(b, SoundType.WOOD).setHardness(1.5f));
+                        .build(b -> b.setSoundType(SoundType.WOOD).setHardness(1.5f));
 
             }
         }
@@ -477,7 +477,7 @@ public enum Features {
                     .next("pillar")
                     .next("twisted")
                     .next("prism")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(2.0F).setResistance(10.0F));
+                    .build(b -> b.setHardness(2.0F).setResistance(10.0F).setSoundType(SoundType.STONE));
         }
     },
 
@@ -495,7 +495,7 @@ public enum Features {
                     .next("bolted")
                     .next("scaffold")
                     .addOreDict("blockBronze")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.METAL).setHardness(5.0F).setHarvestLevel("pickaxe", 1));
+                    .build(b -> b.setSoundType(SoundType.METAL).setHardness(5.0F).setHarvestLevel("pickaxe", 1));
             
             CarvingUtils.addOreGroup("blockBronze");
         }
@@ -522,8 +522,8 @@ public enum Features {
                     .next("weathered-blocks")
                     .next("weathered-half")
                     .next("weathered-block-half")
-                    .build(b -> {
-                        Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(1.0F);
+                    .build(b -> { 
+                        b.setSoundType(SoundType.STONE).setHardness(1.0F);
                         BlockSpeedHandler.speedupBlocks.add(b);
                     });
         }
@@ -575,7 +575,7 @@ public enum Features {
                     .next("bricks-chaotic")
                     .next("cuts")
                     .next("raw")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(0.8F).setResistance(4.0F));
+                    .build(b -> b.setHardness(0.8F).setResistance(4.0F).setSoundType(SoundType.STONE));
         }
         
         @Override
@@ -602,7 +602,7 @@ public enum Features {
                         .setParentFolder("carpet")
                         .newVariation("legacy_"+(dyeColors[c].toLowerCase()))
                         .next("llama_"+(dyeColors[c].toLowerCase()))
-                        .build(b -> Reflection.getReflection().setSoundType(b, SoundType.CLOTH).setHardness(0.1F).setLightOpacity(0));
+                        .build(b -> b.setSoundType(SoundType.CLOTH).setHardness(0.1F).setLightOpacity(0));
             }
         }
     },
@@ -646,7 +646,7 @@ public enum Features {
                     .next("cuts")
                     .next("raw")
                     .addOreDict("blockCharcoal")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(5.0F).setResistance(10.0F));
+                    .build(b -> b.setHardness(5.0F).setResistance(10.0F).setSoundType(SoundType.STONE));
             
             CarvingUtils.addOreGroup("blockCharcoal");
         }
@@ -698,7 +698,7 @@ public enum Features {
                     .next("small")
                     .next("vertical")
                     .next("grid")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.CLOTH).setHardness(0.3F));
+                    .build(b -> b.setSoundType(SoundType.CLOTH).setHardness(0.3F));
         }
 
         @Override
@@ -722,7 +722,7 @@ public enum Features {
                     .next("bolted")
                     .next("scaffold")
                     .addOreDict("blockCobalt")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.METAL).setHardness(5.0F).setHarvestLevel("pickaxe", 1));
+                    .build(b -> b.setSoundType(SoundType.METAL).setHardness(5.0F).setHarvestLevel("pickaxe", 1));
             
             CarvingUtils.addOreGroup("blockCobalt");
             
@@ -784,7 +784,7 @@ public enum Features {
                     .next("indent")
                     .next("marker")
                     .addOreDict("cobblestone")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(2.0F).setResistance(10.0F));
+                    .build(b -> b.setHardness(2.0F).setResistance(10.0F).setSoundType(SoundType.STONE));
         }
     },
 
@@ -828,7 +828,7 @@ public enum Features {
                     .next("cuts")
                     .next("raw")
                     .addOreDict("blockCoal")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(5.0F).setResistance(10.0F));
+                    .build(b -> b.setHardness(5.0F).setResistance(10.0F).setSoundType(SoundType.STONE));
             
             CarvingUtils.addOreGroup("blockCoal");
         }
@@ -880,7 +880,7 @@ public enum Features {
                     .next("raw")
                     .addOreDict("blockFuelCoke")
                     .addOreDict("blockCoalCoke")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(5.0F).setResistance(10.0F));
+                    .build(b -> b.setHardness(5.0F).setResistance(10.0F).setSoundType(SoundType.STONE));
 
             CarvingUtils.addOreGroup("blockCoalCoke");
         }
@@ -932,7 +932,7 @@ public enum Features {
                     .next("bricks-chaotic")
                     .next("cuts")
                     .addOreDict("blockMossy")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(2.0F).setResistance(10.0F));
+                    .build(b -> b.setHardness(2.0F).setResistance(10.0F).setSoundType(SoundType.STONE));
         }
     },
 
@@ -982,7 +982,7 @@ public enum Features {
                         .addOreDict("blockConcrete")
                         .addOreDict("blockConcrete"+dyeColors[i])
                         .build(b -> {
-                            Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(1.5F);
+                            b.setSoundType(SoundType.STONE).setHardness(1.5F);
                             BlockSpeedHandler.speedupBlocks.add(b);
                         });
             }
@@ -1005,7 +1005,7 @@ public enum Features {
                     .next("bolted")
                     .next("scaffold")
                     .addOreDict("blockCopper")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.METAL).setHardness(5.0F).setHarvestLevel("pickaxe", 1));
+                    .build(b -> b.setSoundType(SoundType.METAL).setHardness(5.0F).setHarvestLevel("pickaxe", 1));
             
             CarvingUtils.addOreGroup("blockCopper");
         }
@@ -1058,7 +1058,7 @@ public enum Features {
                     .next("terrain-diamond-zelda")
                     .next("terrain-diamond-ornatelayer")
                     .addOreDict("blockDiamond")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.METAL).setHardness(5.0F).setHarvestLevel("pickaxe", 2));
+                    .build(b -> b.setSoundType(SoundType.METAL).setHardness(5.0F).setHarvestLevel("pickaxe", 2));
             
             CarvingUtils.addOreGroup("blockDiamond");
         }
@@ -1115,7 +1115,7 @@ public enum Features {
                     .next("cuts")
                     .addOreDict("stoneDiorite")
                     .addOreDict("stoneDioritePolished")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(1.5F).setResistance(30.0F));
+                    .build(b -> b.setHardness(1.5F).setResistance(30.0F).setSoundType(SoundType.STONE));
         }
     },
 
@@ -1142,7 +1142,7 @@ public enum Features {
                     .next("horizontal")
                     .next("plate")
                     .addOreDict("dirt")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.GROUND).setHardness(0.5F).setHarvestLevel("shovel", 0));
+                    .build(b -> b.setSoundType(SoundType.GROUND).setHardness(0.5F).setHarvestLevel("shovel", 0));
         }
     },
 
@@ -1160,7 +1160,7 @@ public enum Features {
                     .next("bolted")
                     .next("scaffold")
                     .addOreDict("blockElectrum")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.METAL).setHardness(5.0F).setHarvestLevel("pickaxe", 1));
+                    .build(b -> b.setSoundType(SoundType.METAL).setHardness(5.0F).setHarvestLevel("pickaxe", 1));
             
             CarvingUtils.addOreGroup("blockElectrum");
         }
@@ -1192,7 +1192,7 @@ public enum Features {
                     .next("emeraldCircle")
                     .next("emeraldPrismatic")
                     .addOreDict("blockEmerald")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.METAL).setHardness(5.0F).setResistance(10.0F).setHarvestLevel("pickaxe", 2));
+                    .build(b -> b.setSoundType(SoundType.METAL).setHardness(5.0F).setResistance(10.0F).setHarvestLevel("pickaxe", 2));
             
             CarvingUtils.addOreGroup("blockEmerald");
         }
@@ -1256,7 +1256,7 @@ public enum Features {
                     //.next("pillar")
                     .next("twisted")
                     .next("prism")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(1.5F).setResistance(10.0F));
+                    .build(b -> b.setHardness(1.5F).setResistance(10.0F).setSoundType(SoundType.STONE));
         }
     },
 
@@ -1324,7 +1324,7 @@ public enum Features {
                     .next("twisted")
                     .next("prism")
                     .addOreDict("endstone")
-                    .build(b -> Reflection.getReflection().setSoundType(b.setDragonProof(), SoundType.STONE).setHardness(3.0F).setResistance(15.0F));
+                    .build(b -> b.setDragonProof().setHardness(3.0F).setResistance(15.0F).setSoundType(SoundType.STONE));
         }
     },
 
@@ -1353,7 +1353,7 @@ public enum Features {
                     .next("tilemosaic")
                     .next("vent")
                     .next("wireframeblue")
-                    .build(b -> Reflection.getReflection().setSoundType(b, ChiselSoundTypes.METAL));
+                    .build(b -> b.setSoundType(ChiselSoundTypes.METAL));
         }
 
         @Override
@@ -1375,7 +1375,7 @@ public enum Features {
                     .next("wavy")
                     .next("controllerPurple")
                     .next("uberWavy")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.METAL));
+                    .build(b -> b.setSoundType(SoundType.METAL));
         }
 
         @Override
@@ -1428,7 +1428,7 @@ public enum Features {
                     .next("japanese2").setOrder(23)
                     .addOreDict("blockGlass")
                     .addOreDict("blockGlassColorless")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.GLASS).setHardness(0.3F));
+                    .build(b -> b.setSoundType(SoundType.GLASS).setHardness(0.3F));
 
             Carving.chisel.addVariation("glasspane", CarvingUtils.variationFor(Blocks.GLASS_PANE.getDefaultState(), -20));
             
@@ -1453,7 +1453,7 @@ public enum Features {
                     .next("japanese2").setOrder(23)
                     .addOreDict("paneGlass")
                     .addOreDict("paneGlassColorless")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.GLASS).setHardness(0.3F));
+                    .build(b -> b.setSoundType(SoundType.GLASS).setHardness(0.3F));
         }
         
         @Override
@@ -1510,7 +1510,7 @@ public enum Features {
                         .next("brick")
                         .addOreDict("blockGlass")
                         .addOreDict("blockGlass"+dyeColors[c])
-                        .build(b -> Reflection.getReflection().setSoundType(b, SoundType.GLASS).setHardness(0.3F));
+                        .build(b -> b.setSoundType(SoundType.GLASS).setHardness(0.3F));
 
 
                 Carving.chisel.addVariation("glasspanedyed" + (dyeColors[c].toLowerCase()), CarvingUtils.variationFor(stainedGlassPane.withProperty(prop, EnumDyeColor.byDyeDamage(c)), -1));
@@ -1525,7 +1525,7 @@ public enum Features {
                         .next("brick")
                         .addOreDict("paneGlass")
                         .addOreDict("paneGlass"+dyeColors[c])
-                        .build(b -> Reflection.getReflection().setSoundType(b, SoundType.GLASS).setHardness(0.3F));
+                        .build(b -> b.setSoundType(SoundType.GLASS).setHardness(0.3F));
             }
         }
         
@@ -1641,7 +1641,7 @@ public enum Features {
                     .next("neon")
                     .next("neon-panel")
                     .addOreDict("glowstone")
-                    .build(b ->Reflection.getReflection().setSoundType(b, SoundType.GLASS).setLightLevel(1.0f).setHardness(0.3f).setResistance(1.5f));
+                    .build(b ->b.setLightLevel(1.0f).setHardness(0.3f).setResistance(1.5f).setSoundType(SoundType.GLASS));
         }
     },
 
@@ -1659,7 +1659,7 @@ public enum Features {
                     .next("bolted")
                     .next("scaffold")
                     .addOreDict("blockGold")
-                    .build(b-> Reflection.getReflection().setSoundType(b, SoundType.METAL).setHardness(3.0F).setResistance(10.0F).setHarvestLevel("pickaxe", 2));
+                    .build(b-> b.setSoundType(SoundType.METAL).setHardness(3.0F).setResistance(10.0F).setHarvestLevel("pickaxe", 2));
 
             factory.newBlock(Material.IRON, "gold", null, beaconBaseProvider)
                     .newVariation("terrain-gold-largeingot")
@@ -1678,7 +1678,7 @@ public enum Features {
                     .next("terrain-gold-simple")
 //                    .next("goldEye")
                     .addOreDict("blockGold")
-                    .build(b-> Reflection.getReflection().setSoundType(b, SoundType.METAL).setHardness(3.0F).setResistance(10.0F).setHarvestLevel("pickaxe", 2));
+                    .build(b-> b.setSoundType(SoundType.METAL).setHardness(3.0F).setResistance(10.0F).setHarvestLevel("pickaxe", 2));
             
             CarvingUtils.addOreGroup("blockGold");
         }
@@ -1735,7 +1735,7 @@ public enum Features {
                     .next("cuts")
                     .addOreDict("stoneGranite")
                     .addOreDict("stoneGranitePolished")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(1.5F).setResistance(30.0F));
+                    .build(b -> b.setHardness(1.5F).setResistance(30.0F).setSoundType(SoundType.STONE));
         }
     },
 
@@ -1786,7 +1786,7 @@ public enum Features {
                     .next("twisted")
                     .next("prism")
                     .addOreDict("hardenedClay")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(1.25F).setResistance(7.0F));
+                    .build(b -> b.setHardness(1.25F).setResistance(7.0F).setSoundType(SoundType.STONE));
         }
     },
 
@@ -1843,7 +1843,7 @@ public enum Features {
                     .next("cuts")
                     .addOreDict("ice")
                     .addOreDict("blockIce")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.GLASS).setHardness(0.5F).setLightOpacity(3).setHarvestLevel("pickaxe", 0));
+                    .build(b -> b.setHardness(0.5F).setLightOpacity(3).setSoundType(SoundType.GLASS).setHarvestLevel("pickaxe", 0));
 
             factory.newBlock(Material.ICE, "icepillar", new ChiselBlockProvider<>(iceCreator, BlockCarvableIce.class)).opaque(false)
                     .setGroup("ice")
@@ -1856,7 +1856,7 @@ public enum Features {
                     .next("ornamental")
                     .addOreDict("ice")
                     .addOreDict("blockIce")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.GLASS).setHardness(0.5F).setLightOpacity(3).setHarvestLevel("pickaxe", 0));
+                    .build(b -> b.setHardness(0.5F).setLightOpacity(3).setSoundType(SoundType.GLASS).setHarvestLevel("pickaxe", 0));
         }
     },
 
@@ -1873,7 +1873,7 @@ public enum Features {
                     .next("bolted")
                     .next("scaffold")
                     .addOreDict("blockInvar")
-                    .build(b-> Reflection.getReflection().setSoundType(b, SoundType.METAL).setHardness(5.0f).setHarvestLevel("pickaxe", 1));
+                    .build(b-> b.setSoundType(SoundType.METAL).setHardness(5.0f).setHarvestLevel("pickaxe", 1));
             
             CarvingUtils.addOreGroup("blockInvar");
         }
@@ -1899,7 +1899,7 @@ public enum Features {
                     .next("bolted")
                     .next("scaffold")
                     .addOreDict("blockIron")
-                    .build(b-> Reflection.getReflection().setSoundType(b, SoundType.METAL).setHardness(5.0f).setHarvestLevel("pickaxe", 1));
+                    .build(b-> b.setSoundType(SoundType.METAL).setHardness(5.0f).setHarvestLevel("pickaxe", 1));
 
             factory.newBlock(Material.IRON, "iron", null, beaconBaseProvider)
                     .newVariation("terrain-iron-largeingot")
@@ -1918,7 +1918,7 @@ public enum Features {
                     .next("terrain-iron-vents")
                     .next("terrain-iron-simple")
                     .addOreDict("blockIron")
-                    .build(b-> Reflection.getReflection().setSoundType(b, SoundType.METAL).setHardness(5.0f).setHarvestLevel("pickaxe", 1));
+                    .build(b-> b.setSoundType(SoundType.METAL).setHardness(5.0f).setHarvestLevel("pickaxe", 1));
             
             CarvingUtils.addOreGroup("blockIron");
         }
@@ -1948,7 +1948,7 @@ public enum Features {
                     .next("classicnew")
                     .next("fence")
                     .next("modern")
-                    .build(b-> Reflection.getReflection().setSoundType(b.setDragonProof(), SoundType.METAL).setHardness(5.0f).setHarvestLevel("pickaxe", 0));
+                    .build(b-> b.setDragonProof().setSoundType(SoundType.METAL).setHardness(5.0f).setHarvestLevel("pickaxe", 0));
         }
     },
 
@@ -1972,7 +1972,7 @@ public enum Features {
                     .next("directionleft")
                     .next("directionright")
                     .next("infocon")
-                    .build(b -> Reflection.getReflection().setSoundType(b, ChiselSoundTypes.METAL));
+                    .build(b -> b.setSoundType(ChiselSoundTypes.METAL));
         }
 
         @Override
@@ -1997,7 +1997,7 @@ public enum Features {
                     .next("a1-blocklapis-ornatelayer")
                     .next("masonryLapis")
                     .addOreDict("blockLapis")
-                    .build(b-> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(3.0F).setResistance(5.0F).setHarvestLevel("pickaxe", 1));
+                    .build(b-> b.setHardness(3.0F).setResistance(5.0F).setSoundType(SoundType.STONE).setHarvestLevel("pickaxe", 1));
             
             CarvingUtils.addOreGroup("blockLapis");
         }
@@ -2040,7 +2040,7 @@ public enum Features {
                     .next("prism")
                     .next("bricks-chaotic")
                     .next("cuts")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(4.0F).setResistance(50.0F));
+                    .build(b -> b.setHardness(4.0F).setResistance(50.0F).setSoundType(SoundType.STONE));
         }
         @Override
         void addRecipes(IForgeRegistry<IRecipe> registry)
@@ -2063,7 +2063,7 @@ public enum Features {
                     .next("bolted")
                     .next("scaffold")
                     .addOreDict("blockLead")
-                    .build(b-> Reflection.getReflection().setSoundType(b, SoundType.METAL).setHardness(5.0f).setHarvestLevel("pickaxe", 1));
+                    .build(b-> b.setSoundType(SoundType.METAL).setHardness(5.0f).setHarvestLevel("pickaxe", 1));
             
             CarvingUtils.addOreGroup("blockLead");
         }
@@ -2144,7 +2144,7 @@ public enum Features {
                     .next("raw").setOrder(-100)
                     .addOreDict("stoneLimestone")
                     .addOreDict("stoneLimestonePolished")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(1.5F).setResistance(10.0F));
+                    .build(b -> b.setHardness(1.5F).setResistance(10.0F).setSoundType(SoundType.STONE));
 
         }
 
@@ -2202,7 +2202,7 @@ public enum Features {
                     .next("raw").setOrder(-100)
                     .addOreDict("stoneMarble")
                     .addOreDict("stoneMarblePolished")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(1.5F).setResistance(10.0F));
+                    .build(b -> b.setHardness(1.5F).setResistance(10.0F).setSoundType(SoundType.STONE));
 
 
         }
@@ -2238,7 +2238,7 @@ public enum Features {
                         .next("a1-stonepillar-plainbottomgreek")
                         .addOreDict("stoneMarble")
                         .addOreDict("stoneMarblePolished")
-                        .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(1.5F).setResistance(10.0F));
+                        .build(b -> b.setHardness(1.5F).setResistance(10.0F).setSoundType(SoundType.STONE));
             } else {
                 factory.newBlock(Material.ROCK, "marblepillar", provider)
                         .setGroup("marble")
@@ -2260,7 +2260,7 @@ public enum Features {
                         .next("ornamental")
                         .addOreDict("stoneMarble")
                         .addOreDict("stoneMarblePolished")
-                        .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(1.5F).setResistance(10.0F));
+                        .build(b -> b.setHardness(1.5F).setResistance(10.0F).setSoundType(SoundType.STONE));
             }
         }
     },
@@ -2286,7 +2286,7 @@ public enum Features {
                     .next("a1-netherbrick-red")
                     .next("a1-netherbrick-redsmall")
                     .next("netherFancyBricks")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(2.0F).setResistance(10.0F));
+                    .build(b -> b.setHardness(2.0F).setResistance(10.0F).setSoundType(SoundType.STONE));
         }
     },
 
@@ -2319,7 +2319,7 @@ public enum Features {
                     .next("a1-netherrack-red")
                     .next("a1-netherrack-wells")
                     .addOreDict("netherrack")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(0.4F));
+                    .build(b -> b.setHardness(0.4F).setSoundType(SoundType.STONE));
         }
     },
 
@@ -2337,7 +2337,7 @@ public enum Features {
                     .next("bolted")
                     .next("scaffold")
                     .addOreDict("blockNickel")
-                    .build(b-> Reflection.getReflection().setSoundType(b, SoundType.METAL).setHardness(5.0f).setHarvestLevel("pickaxe", 1));
+                    .build(b-> b.setSoundType(SoundType.METAL).setHardness(5.0f).setHarvestLevel("pickaxe", 1));
 
             CarvingUtils.addOreGroup("blockNickel");
         }
@@ -2372,7 +2372,7 @@ public enum Features {
                     .next("greek")
                     .next("crate")
                     .addOreDict("obsidian")
-                    .build(b -> Reflection.getReflection().setSoundType(b.setDragonProof(), SoundType.STONE).setHardness(50.0F).setResistance(2000.0F).setHarvestLevel("pickaxe", 3));
+                    .build(b -> b.setDragonProof().setHardness(50.0F).setResistance(2000.0F).setSoundType(SoundType.STONE).setHarvestLevel("pickaxe", 3));
         }
     },
 
@@ -2389,7 +2389,7 @@ public enum Features {
                     .next("floral")
                     .next("plain")
                     .next("door")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.PLANT)
+                    .build(b -> b.setSoundType(SoundType.PLANT)
                             .setHardness(1.5f));
         }
 
@@ -2431,7 +2431,7 @@ public enum Features {
                         .next("chaotic-hor")
                         .next("chaotic")
                         .addOreDict("plankWood")
-                        .build(b -> Reflection.getReflection().setSoundType(b, SoundType.WOOD).setHardness(2.0F).setResistance(5.0F));
+                        .build(b -> b.setHardness(2.0F).setResistance(5.0F).setSoundType(SoundType.WOOD));
 
             }
         }
@@ -2451,7 +2451,7 @@ public enum Features {
                     .next("bolted")
                     .next("scaffold")
                     .addOreDict("blockPlatinum")
-                    .build(b-> Reflection.getReflection().setSoundType(b, SoundType.METAL).setHardness(5.0f).setHarvestLevel("pickaxe", 1));
+                    .build(b-> b.setSoundType(SoundType.METAL).setHardness(5.0f).setHarvestLevel("pickaxe", 1));
             
             CarvingUtils.addOreGroup("blockPlatinum");
         }
@@ -2513,7 +2513,7 @@ public enum Features {
                     .addOreDict("prismarine")
                     .addOreDict("prismarineBrick")
                     .addOreDict("prismarineDark")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(1.5F).setResistance(10.0F));
+                    .build(b -> b.setHardness(1.5F).setResistance(10.0F).setSoundType(SoundType.STONE));
         }
     },
 
@@ -2564,7 +2564,7 @@ public enum Features {
                     .next("bricks-chaotic")
                     .next("cuts")
                     .addOreDict("blockQuartz")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(0.8F).setResistance(4.0F));
+                    .build(b -> b.setHardness(0.8F).setResistance(4.0F).setSoundType(SoundType.STONE));
         }
     },
 
@@ -2618,7 +2618,7 @@ public enum Features {
                     .next("twisted")
                     .next("prism")
                     .addOreDict("blockRedstone")
-                    .build(b->Reflection.getReflection().setSoundType(b, SoundType.METAL).setHardness(5.0F).setResistance(10.0F));
+                    .build(b->b.setHardness(5.0F).setResistance(10.0F).setSoundType(SoundType.METAL));
         }
 
         @Override
@@ -2679,7 +2679,7 @@ public enum Features {
                     .next("prism")
                     .next("seamless").setOrder(-12)
                     .addOreDict("sandstone")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(0.8F));
+                    .build(b -> b.setSoundType(SoundType.STONE).setHardness(0.8F));
         }
     },
 
@@ -2735,7 +2735,7 @@ public enum Features {
                     .next("prism")
                     .next("seamless").setOrder(-12)
                     .addOreDict("sandstone")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(0.8F));
+                    .build(b -> b.setSoundType(SoundType.STONE).setHardness(0.8F));
         }
     },
 
@@ -2761,7 +2761,7 @@ public enum Features {
                     .next("scribbles-14")
                     .next("scribbles-15")
                     .addOreDict("sandstone")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(0.8F));
+                    .build(b -> b.setSoundType(SoundType.STONE).setHardness(0.8F));
         }
     },
 
@@ -2787,7 +2787,7 @@ public enum Features {
                     .next("scribbles-14")
                     .next("scribbles-15")
                     .addOreDict("sandstone")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(0.8F));
+                    .build(b -> b.setSoundType(SoundType.STONE).setHardness(0.8F));
         }
     },
 
@@ -2805,7 +2805,7 @@ public enum Features {
                     .next("bolted")
                     .next("scaffold")
                     .addOreDict("blockSilver")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.METAL).setHarvestLevel("pickaxe", 1));
+                    .build(b -> b.setSoundType(SoundType.METAL).setHarvestLevel("pickaxe", 1));
             
             CarvingUtils.addOreGroup("blockSilver");
         }
@@ -2831,7 +2831,7 @@ public enum Features {
                     .next("bolted")
                     .next("scaffold")
                     .addOreDict("blockSteel")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.METAL).setHarvestLevel("pickaxe", 2));
+                    .build(b -> b.setSoundType(SoundType.METAL).setHarvestLevel("pickaxe", 2));
 
             CarvingUtils.addOreGroup("blockSteel");
         }
@@ -2909,7 +2909,7 @@ public enum Features {
                     .addOreDict("stone")
                     .addOreDict("brickStone")
                     .addOreDict("bricksStone")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(1.5F).setResistance(10.0F));
+                    .build(b -> b.setHardness(1.5F).setResistance(10.0F).setSoundType(SoundType.STONE));
         }
     },
 
@@ -2939,7 +2939,7 @@ public enum Features {
                     .next("fanStillTransparent").opaque(false)
                     .next("massiveFan")
                     .next("massiveHexPlating")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.METAL));
+                    .build(b -> b.setSoundType(SoundType.METAL));
 
             factory.newBlock(Material.IRON, "technicalNew", provider)
                     .setGroup("factory")
@@ -2954,7 +2954,7 @@ public enum Features {
                     .next("scaffoldLarge")
                     .next("Piping")
                     //TODO Retexture .next("TapeDrive")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.METAL));
+                    .build(b -> b.setSoundType(SoundType.METAL));
         }
     },
 
@@ -2978,7 +2978,7 @@ public enum Features {
                     .next("smalltiles-light")
                     .next("stand-creeper")
                     .next("stand-mosaic")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(1.5F).setResistance(10.0F));
+                    .build(b -> b.setHardness(1.5F).setResistance(10.0F).setSoundType(SoundType.STONE));
 
             factory.newBlock(Material.ROCK, "templemossy", provider)
                     .setGroup("temple")
@@ -2998,7 +2998,7 @@ public enum Features {
                     .next("smalltiles-light")
                     .next("stand-creeper")
                     .next("stand-mosaic")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(1.5F).setResistance(10.0F));
+                    .build(b -> b.setHardness(1.5F).setResistance(10.0F).setSoundType(SoundType.STONE));
         }
 
         @Override
@@ -3024,7 +3024,7 @@ public enum Features {
                     .next("bolted")
                     .next("scaffold")
                     .addOreDict("blockTin")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.METAL).setHarvestLevel("pickaxe", 1));
+                    .build(b -> b.setSoundType(SoundType.METAL).setHarvestLevel("pickaxe", 1));
 
             CarvingUtils.addOreGroup("blockTin");
         }
@@ -3056,7 +3056,7 @@ public enum Features {
                     .next("black2")
                     .next("opening")
                     .next("plate")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.METAL));
+                    .build(b -> b.setSoundType(SoundType.METAL));
         }
 
         @Override
@@ -3082,7 +3082,7 @@ public enum Features {
                     .next("bolted")
                     .next("scaffold")
                     .addOreDict("blockUranium")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.METAL).setHarvestLevel("pickaxe", 1));
+                    .build(b -> b.setSoundType(SoundType.METAL).setHarvestLevel("pickaxe", 1));
             
             CarvingUtils.addOreGroup("blockUranium");
         }
@@ -3108,7 +3108,7 @@ public enum Features {
                     .next("8")
                     .next("9")
                     .next("companion")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(1.5F).setResistance(20.0F));
+                    .build(b -> b.setHardness(1.5F).setResistance(20.0F).setSoundType(SoundType.STONE));
         }
 
         @Override
@@ -3224,7 +3224,7 @@ public enum Features {
                     .next("prism")
                     .next("bricks-chaotic")
                     .next("cuts")
-                    .build(b -> Reflection.getReflection().setSoundType(b, SoundType.STONE).setHardness(4.0F).setResistance(50.0F));
+                    .build(b -> b.setHardness(4.0F).setResistance(50.0F).setSoundType(SoundType.STONE));
         }
 
         @Override
@@ -3252,7 +3252,7 @@ public enum Features {
                         .newVariation("legacy_"+(dyeColors[c].toLowerCase()))
                         .next("llama_"+(dyeColors[c].toLowerCase()))
                         .addOreDict("blockWool")
-                        .build(b -> Reflection.getReflection().setSoundType(b, SoundType.CLOTH).setHardness(0.8F));
+                        .build(b -> b.setSoundType(SoundType.CLOTH).setHardness(0.8F));
             }
         }
     };
